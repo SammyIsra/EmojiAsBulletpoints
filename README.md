@@ -21,12 +21,11 @@ const list = [
 ]
 ```
 
-Then you would want to write your React component like this:
+You can use it like this:
 ```jsx
 <DefaultEmojiList emojis={emojis} itemList={list} />
 ```
-
-Or, if you would rather do it render-props style (by styling your own list):
+Or if you want more control on how you render your list, you can use it render-prop style:
 ```jsx
 <EmojiRenderProps emojis={emojis} itemList={list}>
 { (wholeList) => (
@@ -45,7 +44,7 @@ Note that `wholeList` is an array of objects that look like so:
     listItem: String //Text of the list item
 }
 ```
-And it will end up looking like this: 
+And your list will look like this:
 
 ![Example of emoji-as-bulletpoints](https://i.imgur.com/dzqt5W6.png)
 
